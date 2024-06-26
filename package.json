@@ -4,15 +4,20 @@
   "description": "To-do-list for the odin project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --open --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
-    "url": "to-do-list"
+    "url": "git@github.com:Dbeee-Acharya/to-do-list.git"
   },
   "author": "dbee",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4"
   }
