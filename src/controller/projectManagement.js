@@ -3,7 +3,7 @@ import {storeItem, getStoredItems} from "../model/storage.js"
 function createNewProject(projectName) {
     // Creates a new project object
 
-    const project = {
+    let project = {
         projectName: projectName
     }
 
@@ -11,7 +11,7 @@ function createNewProject(projectName) {
 }
 
 const storeProject = (project) => {
-    let currentlyStoredProjects = getStoredItems('projects');
+    const currentlyStoredProjects = getStoredItems('projects');
 
     if(currentlyStoredProjects === null) {
         const listOfProjects = []

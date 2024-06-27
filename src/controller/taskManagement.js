@@ -3,19 +3,23 @@ import {storeItem, getStoredItems} from "../model/storage.js"
 function createNewTask(name, description, dueDate, priority, status, parentProject) {
     //Creates a new task object
 
-    const taskName = name;
-    const taskDescription = description;
-    const taskDueDate = dueDate;
-    const taskPriority = priority;
-    const taskStatus = status;
-    const taskParentProject = parentProject;
+    let taskName = name;
+    let taskDescription = description;
+    let taskDueDate = dueDate;
+    let taskPriority = priority;
+    let taskStatus = status;
+    let taskParentProject = parentProject;
+
+    if(parentProject === null) {
+       taskParentProject = "default";
+    }
 
     return {taskName, taskDescription, taskDueDate, taskPriority, taskStatus, taskParentProject};
 }
 
 
 const addTaskToList = (task) => {
-    let currentlyStoredTasks = getStoredItems('tasks');
+    const currentlyStoredTasks = getStoredItems('tasks');
 
     if (currentlyStoredTasks === null) {
         const tasksList = []
