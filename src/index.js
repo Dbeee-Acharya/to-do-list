@@ -1,12 +1,12 @@
 import './style.css'
-import {createNewTask} from "./controller/taskManagement.js";
-import {storeTask, getStoredItems} from "./model/storage.js"
+import {createNewTask, addTaskToList} from "./controller/taskManagement.js";
+
+let testTask = createNewTask("name", "description", "DueDate", "priority", "status", "parent");
+console.log(testTask)
+
+addTaskToList(testTask)
+
+testTask = createNewTask("name2", "description2", "DueDate2", "priority2", "status2", "parent2");
+addTaskToList(testTask)
 
 
-console.log(createNewTask("name", "description", "DueDate", "priority", "status", "parent"));
-
-
-storeTask([{"test": "test"}, {"test2": "test2"}])
-
-console.log(getStoredItems("tasks"));
-console.log(JSON.parse(getStoredItems('tasks'))[1]);

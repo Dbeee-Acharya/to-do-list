@@ -1,7 +1,8 @@
-const storeTask = (task) => {
+
+const storeItem = (key, value) => {
     //logic to store task
 
-    localStorage.setItem("tasks", JSON.stringify(task));
+    localStorage.setItem(key, JSON.stringify(value));
 }
 
 const getStoredItems = (itemKey) => {
@@ -10,4 +11,4 @@ const getStoredItems = (itemKey) => {
     return localStorage.getItem(itemKey)
 }
 
-export {storeTask, getStoredItems}
+export {storeItem, getStoredItems}
