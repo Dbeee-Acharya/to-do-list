@@ -35,4 +35,4 @@ const completeTask = (task) => {
     task.taskStatus = "complete";
 }
 
-export {createNewTask, addTaskToList}
+export {createNewTask, addTaskToList, completeTask}

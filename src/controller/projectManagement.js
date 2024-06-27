@@ -1,3 +1,5 @@
+import {storeItem, getStoredItems} from "../model/storage.js"
+
 function createNewProject(projectName) {
     // Creates a new project object
 
@@ -8,4 +10,21 @@ function createNewProject(projectName) {
     return project;
 }
 
-export {createNewProject}
+const storeProject = (project) => {
+    let currentlyStoredProjects = getStoredItems('projects');
+
+    if(currentlyStoredProjects === null) {
+        const listOfProjects = []
+        listOfProjects.push(project);
+
+        storeItem('projects', listOfProjects);
+
+    } else {
+        const listOfProjects = JSON.parse(currentlyStoredProjects);
+        listOfProjects.push(project);
+
+        storeItem('projects', listOfProjects);
+    }
+}
+
+export {createNewProject, storeProject}
