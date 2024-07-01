@@ -74,5 +74,5 @@ body {
 }
 
 #main-section {
-  margin-left: 500px;
+  margin-left: max(200px, 15%);
 }
