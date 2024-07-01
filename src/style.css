@@ -1,71 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --sidebar-heading: #1C1D22;
-    --sidebar-unselected-tab: rgba(28, 29, 34, 0.5);
-    --sidebar-selected-tab-background: rgba(28, 29, 34, 0.04);
+  --sidebar-heading: #1c1d22;
+  --sidebar-unselected-tab: rgba(28, 29, 34, 0.5);
+  --sidebar-selected-tab-background: rgba(28, 29, 34, 0.04);
 }
 
 * {
-    box-sizing: border-box;
-    font-family: "Exo 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    height: 100%;
+  margin: 0;
+  height: 100%;
 }
 
 #sidebar {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: max(200px, 15%);
-    background-color: #f4f4f4;
-    padding: 80px 28px 16px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    position: fixed;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: max(200px, 15%);
+  background-color: #f4f4f4;
+  padding: 80px 28px 16px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: fixed;
 }
 
 .sidebar-heading {
-    font-weight: 600;
-    font-size: 32px;
-    margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 16px;
 }
 
-.tasks-container,.projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.tasks-container,
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.tasks-container h3, .projects-container h3 {
-    margin: 0 0 10px;
-    color: var(--sidebar-heading);
-    font-weight: 600;
-    font-size: 16px;
+.tasks-container h3,
+.projects-container h3 {
+  margin: 0 0 10px;
+  color: var(--sidebar-heading);
+  font-weight: 600;
+  font-size: 16px;
 }
 
-.tasks-container button,.projects-container button {
-    background-color: transparent;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    height: 36px;
-    width: 144px;
-    padding: 10px 18px;
-    margin-left: 16px;
-    color: var(--sidebar-unselected-tab);
-    font-weight: 500;
-    border-radius: 18px;
+.tasks-container button,
+.projects-container button {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  height: 36px;
+  width: 144px;
+  padding: 10px 18px;
+  margin-left: 16px;
+  color: var(--sidebar-unselected-tab);
+  font-weight: 500;
+  border-radius: 18px;
+}
+
+#main-section {
+  margin-left: 500px;
 }
