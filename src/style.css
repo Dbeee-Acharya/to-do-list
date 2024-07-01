@@ -75,4 +75,21 @@ body {
 
 #main-section {
   margin-left: max(200px, 15%);
+  padding: 160px 64px 36px;
+  display: grid;
+  grid-template-columns: 440px 440px;
+}
+
+.to-do-column {
+  margin-left: 24px;
+  border: 1px dashed grey;
+  border-radius: 12px;
+  padding: 20px 20px 12px;
+}
+
+.to-do-column-heading {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--sidebar-unselected-tab);
+  border-bottom: 0.5px dotted var(--sidebar-unselected-tab);
 }
